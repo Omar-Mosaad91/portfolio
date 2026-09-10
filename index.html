@@ -1,105 +1,296 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Data Analyst</title>
+    <title>Omar Mosaad | Data Analyst</title>
+    <meta name="description" content="Omar Mosaad - Data Analyst and Business Intelligence Professional.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- قسم المشاريع -->
-    <section id="projects" class="projects-section">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            
-            <!-- كارت مشروع HR Analytics -->
-            <div class="project-card" onclick="openModal('hrModal')">
-                <div class="card-image">
-                    <img src="HR_Project_1.png" alt="HR Analytics Dashboard">
-                </div>
-                <div class="card-content">
-                    <h3>HR Analytics Dashboard</h3>
-                    <p>Workforce insights tracking employee attrition, overtime patterns, and income distribution.</p>
-                    <span class="tech-tag">Power BI • DAX</span>
-                    <div class="card-hint">Click to view dashboards</div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- نافذة التفاصيل (Modal) مع سلايد شو متحرك تلقائياً -->
-    <div id="hrModal" class="project-modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('hrModal')">&times;</span>
-            <h2>HR Analytics Dashboard</h2>
-            
-            <div class="modal-about">
-                <h3>Project Overview</h3>
-                <p>نظام تحليلي متكامل لمتابعة معدلات دوران العاملين، وتحليل أنماط الوقت الإضافي، وتوزيع الدخل باستخدام Power BI و DAX.</p>
-            </div>
-
-            <!-- صور السلايد شو المتحركة تلقائياً (بحجم مضبوط ومنظم) -->
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="HR_Project_1.png" alt="Overview Dashboard">
-                    <div class="slide-text">1 / 4 - Overview Dashboard</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="HR_Project_2.png" alt="Attrition Analysis">
-                    <div class="slide-text">2 / 4 - Attrition Analysis</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="HR_Project_3.png" alt="Salary & Performance">
-                    <div class="slide-text">3 / 4 - Salary & Performance</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="HR_Project_4.png" alt="Employee Care">
-                    <div class="slide-text">4 / 4 - Employee Care</div>
-                </div>
-            </div>
-        </div>
+    <!-- خلفية متحركة تفاعلية -->
+    <div class="bg-animation">
+        <div class="blob"></div>
+        <div class="blob"></div>
     </div>
 
-    <!-- كود الـ JavaScript الخاص بالتقليب التلقائي والتأثيرات -->
-    <script>
-        let slideIndex = 0;
-        let slideInterval;
+    <header>
+        <nav>
+            <div class="logo">OM<span>.</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="badge">
+                    <span></span> Available for Opportunities
+                </div>
+                <h1>
+                    Hi, I'm <span class="highlight">Omar Mosaad</span>
+                </h1>
+                <h2>
+                    Transforming Raw Data Into <span class="typed-text"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-desc">
+                    Dedicated Data Analyst specialized in uncovering hidden patterns, building robust business intelligence dashboards, and driving strategic decisions through advanced analytics.
+                </p>
+                <div class="buttons">
+                    <a href="#projects" class="btn primary-btn">
+                        Explore My Work
+                    </a>
+                    <a href="#contact" class="btn outline-btn">
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I am a results-driven <strong>Data Analyst</strong> with a strong foundation in transforming complex datasets into clear, actionable business strategies. My core value lies in bridging the gap between numbers and business growth—ensuring every metric tells a story that optimizes performance and empowers data-backed decisions.
+            </p>
+        </section>
+
+        <section id="skills" class="fade-in">
+            <h2>Core Competencies</h2>
+            <div class="skills-container">
+                <div class="skill">Python</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Power BI</div>
+                <div class="skill">Excel</div>
+                <div class="skill">Pandas</div>
+                <div class="skill">DAX</div>
+                <div class="skill">Data Visualization</div>
+                <div class="skill">Business Intelligence</div>
+            </div>
+        </section>
+
+        <!-- قسم المشاريع التفاعلي -->
+        <section id="projects" class="fade-in">
+            <h2>Featured Projects</h2>
+            <div class="projects-container">
+                
+                <!-- Project 1: Superstore Analysis -->
+                <div class="project-card" onclick="openModal('superstoreModal')">
+                    <h3>Superstore Analysis</h3>
+                    <p>Comprehensive sales, profit, customer segmentation, and regional performance dashboard.</p>
+                    <span>Power BI • DAX</span>
+                    <div class="card-hint">Click to view dashboards & details</div>
+                </div>
+
+                <!-- Project 2: HR Analytics -->
+                <div class="project-card" onclick="openModal('hrModal')">
+                    <h3>HR Analytics</h3>
+                    <p>Workforce insights tracking employee attrition, overtime patterns, and income distribution.</p>
+                    <span>Power BI • DAX</span>
+                    <div class="card-hint">Click to view dashboards & details</div>
+                </div>
+
+                <!-- Project 3: Coffee Sales Analysis -->
+                <div class="project-card" onclick="openModal('coffeeModal')">
+                    <h3>Coffee Sales Analysis</h3>
+                    <p>Deep dive into transactional data to evaluate consumer behavior and product trends.</p>
+                    <span>Excel • Power BI</span>
+                    <div class="card-hint">Click to view dashboards & details</div>
+                </div>
+
+                <!-- Project 4: Kickstarter Analysis -->
+                <div class="project-card" onclick="openModal('kickstarterModal')">
+                    <h3>Kickstarter Analysis</h3>
+                    <p>Campaign performance tracking and success rate probability modeling.</p>
+                    <span>Power BI • Excel</span>
+                    <div class="card-hint">Click to view dashboards & details</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modals التفاعلية لكل مشروع -->
+        
+        <!-- Modal: Superstore -->
+        <div id="superstoreModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('superstoreModal')">&times;</span>
+                <h2>Superstore Analysis</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="dashboard1-img1.png" alt="Sales Overview">
+                        <div class="slide-caption">Overview & Regional Performance Dashboard</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="dashboard1-img2.png" alt="Customer Segmentation">
+                        <div class="slide-caption">Customer Segmentation & Profitability Analysis</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'superstoreModal')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'superstoreModal')">&#10095;</a>
+                </div>
+                <div class="modal-about">
+                    <h3>Project Overview & Insights</h3>
+                    <p>This comprehensive Power BI solution targets retail optimization. By analyzing multi-year transactional data using advanced DAX measures, the dashboard highlights top-performing product categories, regional profit leakages, and precise customer segmentation behaviors to drive targeted marketing campaigns.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: HR Analytics -->
+        <div id="hrModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('hrModal')">&times;</span>
+                <h2>HR Analytics</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="hr-img1.png" alt="Attrition Dashboard">
+                        <div class="slide-caption">Workforce Attrition & Overview Dashboard</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="hr-img2.png" alt="Demographics & Income">
+                        <div class="slide-caption">Demographics, Overtime & Income Distribution</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'hrModal')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'hrModal')">&#10095;</a>
+                </div>
+                <div class="modal-about">
+                    <h3>Project Overview & Insights</h3>
+                    <p>Designed using the HR dataset, this multi-page dashboard tracks key workforce dynamics. It evaluates employee attrition drivers, correlation between overtime patterns and resignation rates, and departmental salary distribution, empowering management to improve retention strategies.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Coffee Sales -->
+        <div id="coffeeModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('coffeeModal')">&times;</span>
+                <h2>Coffee Sales Analysis</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="coffee-img1.png" alt="Sales Trends">
+                        <div class="slide-caption">Transactional Trends & Product Performance</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'coffeeModal')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'coffeeModal')">&#10095;</a>
+                </div>
+                <div class="modal-about">
+                    <h3>Project Overview & Insights</h3>
+                    <p>An in-depth evaluation of retail coffee transactions combining Excel data transformation with interactive Power BI reporting. Focuses on peak hours, best-selling product variations, and consumer purchasing habits across different store branches.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Kickstarter -->
+        <div id="kickstarterModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('kickstarterModal')">&times;</span>
+                <h2>Kickstarter Analysis</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="kickstarter-img1.png" alt="Campaign Success">
+                        <div class="slide-caption">Campaign Success Rates & Goal Analysis</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'kickstarterModal')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'kickstarterModal')">&#10095;</a>
+                </div>
+                <div class="modal-about">
+                    <h3>Project Overview & Insights</h3>
+                    <p>Tracking global crowdfunding campaigns to model success rate probabilities based on funding goals, launch timing, and category trends. Utilizes Power BI and Excel statistical functions to advise creators on optimal campaign strategies.</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="contact" class="fade-in">
+            <h2>Let's Build Something Great</h2>
+            <p class="contact-desc">
+                Have a project in mind, a data challenge to solve, or want to discuss analytics opportunities? Get in touch.
+            </p>
+            <a href="https://www.linkedin.com/" target="_blank" class="btn primary-btn">
+                Connect on LinkedIn
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Omar Mosaad. Crafted with precision & data.</p>
+    </footer>
+
+    <script>
+        // Typing effect
+        const words = ["Strategic Insights.", "Business Value.", "Interactive Dashboards.", "Growth Metrics."];
+        let i = 0;
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.querySelector('.typed-text').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return;
+                }
+                setTimeout(loopTyping, 90);
+            };
+            loopTyping();
+        }
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.querySelector('.typed-text').innerHTML = word.join("");
+                } else {
+                    i = (i + 1) % words.length;
+                    setTimeout(typingEffect, 400);
+                    return;
+                }
+                setTimeout(loopDeleting, 45);
+            };
+            loopDeleting();
+        }
+        typingEffect();
+
+        // Modal and Slideshow JavaScript Control
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = "flex";
-            showSlides(); // ابدأ التقليب التلقائي أول ما الـ Modal تفتح
-            slideInterval = setInterval(showSlides, 3500); // تقليب كل 3.5 ثانية
+            document.getElementById(modalId).style.display = "block";
+            showSlides(1, modalId);
         }
 
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
-            clearInterval(slideInterval); // وقف التقليب لما نقفل النافذة لتوفير الموارد
         }
 
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            if (slides.length === 0) return;
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }    
-            slides[slideIndex-1].style.display = "block";  
-        }
-
-        // إغلاق النافذة لو المستخدم ضغط برا المحتوى
+        // Close modal when clicking outside of it
         window.onclick = function(event) {
             if (event.target.classList.contains('project-modal')) {
-                closeModal(event.target.id);
+                event.target.style.display = "none";
             }
         }
-    </script>
 
+        // Slideshow logic per modal
+        let slideIndices = {};
+
+        function plusSlides(n, modalId) {
+            showSlides(slideIndices[modalId] += n, modalId);
+        }
+
+        function showSlides(n, modalId) {
+            let modal = document.getElementById(modalId);
+            let slides = modal.getElementsByClassName("slide");
+            if (!slideIndices[modalId]) { slideIndices[modalId] = 1; }
+            
+            if (n > slides.length) { slideIndices[modalId] = 1; }
+            if (n < 1) { slideIndices[modalId] = slides.length; }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndices[modalId] - 1].style.display = "block";  
+        }
+    </script>
 </body>
 </html>
