@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Mosaad | Data Analyst</title>
+    <title>Omar Mosaad | Data Analyst & Science Enthusiast</title>
     <meta name="description" content="Omar Mosaad - Data Analyst and Data Science enthusiast.">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -34,10 +34,10 @@
                     Hi, I'm <span>Omar Mosaad</span>
                 </h1>
                 <h2>
-                    Turning Data Into <span class="typed-text">Meaningful Insights</span>
+                    I turn complex datasets into <span class="typed-text"></span><span class="cursor">|</span>
                 </h2>
                 <p>
-                    I am building my career in Data Analytics while developing my knowledge in Data Science.
+                    Data Science student & self-driven Analyst. I bridge the gap between raw numbers and strategic business decisions using Python, SQL, and Power BI.
                 </p>
                 <div class="buttons">
                     <a href="#projects" class="btn">
@@ -54,7 +54,7 @@
         <section id="about">
             <h2>About Me</h2>
             <p>
-                I am a Data Science student passionate about Data Analytics, Business Understanding, and turning raw data into useful insights that can support better decisions.
+                I am an ambitious Data Science student and Data Analyst deeply passionate about uncovering hidden patterns, building interactive business dashboards, and transforming messy data into clear, actionable insights that drive growth and smart decision-making.
             </p>
         </section>
 
@@ -90,7 +90,7 @@
                     <span>Power BI • DAX</span>
                 </div>
                 <div class="project-card">
-                    <h3>Coffee Sales Analysis</h3>
+                    ### Coffee Sales Analysis
                     <p>
                         Sales performance, customer behavior and product analysis.
                     </p>
@@ -123,30 +123,47 @@
         <p>© 2026 Omar Mosaad. All Rights Reserved.</p>
     </footer>
 
-    <!-- Interactive Typing Script -->
+    <!-- Sleek Typing Script -->
     <script>
-        const texts = ["Meaningful Insights", "Business Value", "Smart Decisions", "Data Stories"];
-        let count = 0;
-        let index = 0;
-        let currentText = "";
-        let letter = "";
+        const words = ["actionable insights.", "business growth.", "interactive dashboards.", "smart decisions."];
+        let i = 0;
+        let timer;
 
-        (function type() {
-            if (count === texts.length) {
-                count = 0;
-            }
-            currentText = texts[count];
-            letter = currentText.slice(0, ++index);
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.querySelector('.typed-text').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
 
-            document.querySelector(".typed-text").textContent = letter;
-            if (letter.length === currentText.length) {
-                count++;
-                index = 0;
-                setTimeout(type, 2000); // Wait 2 seconds before switching text
-            } else {
-                setTimeout(type, 100);
-            }
-        }());
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.querySelector('.typed-text').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(typingEffect, 500);
+                    return;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        typingEffect();
     </script>
 </body>
 </html>
