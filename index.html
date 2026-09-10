@@ -8,9 +8,9 @@
 </head>
 <body>
 
-    <!-- قسم المشاريع (Projects Section) -->
+    <!-- قسم المشاريع -->
     <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
+        <h2>Featured Projects</h2>
         <div class="projects-grid">
             
             <!-- كارت مشروع HR Analytics -->
@@ -21,16 +21,16 @@
                 <div class="card-content">
                     <h3>HR Analytics Dashboard</h3>
                     <p>Workforce insights tracking employee attrition, overtime patterns, and income distribution.</p>
-                    <span>Power BI • DAX</span>
-                    <div class="card-hint">Click to view details</div>
+                    <span class="tech-tag">Power BI • DAX</span>
+                    <div class="card-hint">Click to view dashboards</div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- نافذة التفاصيل (Modal) الخاصة بمشروع الـ HR -->
-    <div id="hrModal" class="project-modal">
+    <!-- نافذة التفاصيل (Modal) مع سلايد شو متحرك تلقائياً -->
+    <div id="hrModal" class="project-modal" style="display: none;">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('hrModal')">&times;</span>
             <h2>HR Analytics Dashboard</h2>
@@ -40,42 +40,63 @@
                 <p>نظام تحليلي متكامل لمتابعة معدلات دوران العاملين، وتحليل أنماط الوقت الإضافي، وتوزيع الدخل باستخدام Power BI و DAX.</p>
             </div>
 
-            <!-- عرض صور لوحات التحسكم الأربعة -->
-            <div class="modal-images">
-                <div class="img-box">
-                    <img src="HR_Project_1.png" alt="Overview View">
-                    <span>Overview Dashboard</span>
+            <!-- صور السلايد شو المتحركة تلقائياً (بحجم مضبوط ومنظم) -->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="HR_Project_1.png" alt="Overview Dashboard">
+                    <div class="slide-text">1 / 4 - Overview Dashboard</div>
                 </div>
-                <div class="img-box">
+
+                <div class="mySlides fade">
                     <img src="HR_Project_2.png" alt="Attrition Analysis">
-                    <span>Attrition Analysis</span>
+                    <div class="slide-text">2 / 4 - Attrition Analysis</div>
                 </div>
-                <div class="img-box">
+
+                <div class="mySlides fade">
                     <img src="HR_Project_3.png" alt="Salary & Performance">
-                    <span>Salary & Performance</span>
+                    <div class="slide-text">3 / 4 - Salary & Performance</div>
                 </div>
-                <div class="img-box">
+
+                <div class="mySlides fade">
                     <img src="HR_Project_4.png" alt="Employee Care">
-                    <span>Employee Care</span>
+                    <div class="slide-text">4 / 4 - Employee Care</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- السكربت البسيط للتحكم في فتح وغلق الـ Modal -->
+    <!-- كود الـ JavaScript الخاص بالتقليب التلقائي والتأثيرات -->
     <script>
+        let slideIndex = 0;
+        let slideInterval;
+
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "flex";
+            showSlides(); // ابدأ التقليب التلقائي أول ما الـ Modal تفتح
+            slideInterval = setInterval(showSlides, 3500); // تقليب كل 3.5 ثانية
         }
 
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
+            clearInterval(slideInterval); // وقف التقليب لما نقفل النافذة لتوفير الموارد
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (slides.length === 0) return;
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }    
+            slides[slideIndex-1].style.display = "block";  
         }
 
         // إغلاق النافذة لو المستخدم ضغط برا المحتوى
         window.onclick = function(event) {
             if (event.target.classList.contains('project-modal')) {
-                event.target.style.display = "none";
+                closeModal(event.target.id);
             }
         }
     </script>
