@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Mosaad | Data Analyst & Science Enthusiast</title>
-    <meta name="description" content="Omar Mosaad - Data Analyst and Data Science enthusiast.">
+    <title>Omar Mosaad | Data Analyst</title>
+    <meta name="description" content="Omar Mosaad - Data Analyst and Business Intelligence Professional.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <!-- Navigation -->
     <header>
         <nav>
-            <div class="logo">OM</div>
+            <div class="logo">OM<span>.</span></div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -27,79 +27,81 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <p class="small-title">
-                    DATA ANALYST • DATA SCIENCE
-                </p>
+                <div class="badge">
+                    <span></span> Available for Opportunities
+                </div>
                 <h1>
-                    Hi, I'm <span>Omar Mosaad</span>
+                    Hi, I'm <span class="highlight">Omar Mosaad</span>
                 </h1>
                 <h2>
-                    I turn complex datasets into <span class="typed-text"></span><span class="cursor">|</span>
+                    Transforming Raw Data Into <span class="typed-text"></span><span class="cursor">|</span>
                 </h2>
-                <p>
-                    Data Science student & self-driven Analyst. I bridge the gap between raw numbers and strategic business decisions using Python, SQL, and Power BI.
+                <p class="hero-desc">
+                    Dedicated Data Analyst specialized in uncovering hidden patterns, building robust business intelligence dashboards, and driving strategic decisions through advanced analytics.
                 </p>
                 <div class="buttons">
-                    <a href="#projects" class="btn">
-                        View My Projects
+                    <a href="#projects" class="btn primary-btn">
+                        Explore My Work
                     </a>
-                    <a href="#contact" class="btn secondary">
-                        Contact Me
+                    <a href="#contact" class="btn outline-btn">
+                        Let's Talk
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- About -->
-        <section id="about">
+        <section id="about" class="fade-in">
             <h2>About Me</h2>
-            <p>
-                I am an ambitious Data Science student and Data Analyst deeply passionate about uncovering hidden patterns, building interactive business dashboards, and transforming messy data into clear, actionable insights that drive growth and smart decision-making.
+            <p class="about-text">
+                I am a results-driven <strong>Data Analyst</strong> with a strong foundation in transforming complex datasets into clear, actionable business strategies. My core value lies in bridging the gap between numbers and business growth—ensuring every metric tells a story that optimizes performance and empowers data-backed decisions.
             </p>
         </section>
 
         <!-- Skills -->
-        <section id="skills">
-            <h2>Skills</h2>
+        <section id="skills" class="fade-in">
+            <h2>Core Competencies</h2>
             <div class="skills-container">
-                <div class="skill">Excel</div>
-                <div class="skill">Power BI</div>
-                <div class="skill">SQL</div>
                 <div class="skill">Python</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Power BI</div>
+                <div class="skill">Excel</div>
                 <div class="skill">Pandas</div>
                 <div class="skill">DAX</div>
+                <div class="skill">Data Visualization</div>
+                <div class="skill">Business Intelligence</div>
             </div>
         </section>
 
         <!-- Projects -->
-        <section id="projects">
+        <section id="projects" class="fade-in">
             <h2>Featured Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
                     <h3>Superstore Analysis</h3>
                     <p>
-                        Sales, Profit, Customers, Products, Regions and Shipping analysis.
+                        Comprehensive sales, profit, customer segmentation, and regional performance dashboard.
                     </p>
                     <span>Power BI • DAX</span>
                 </div>
                 <div class="project-card">
                     <h3>HR Analytics</h3>
                     <p>
-                        Employee attrition, overtime, income and workforce analysis.
+                        Workforce insights tracking employee attrition, overtime patterns, and income distribution.
                     </p>
                     <span>Power BI • DAX</span>
                 </div>
                 <div class="project-card">
-                    ### Coffee Sales Analysis
+                    <h3>Coffee Sales Analysis</h3>
                     <p>
-                        Sales performance, customer behavior and product analysis.
+                        Deep dive into transactional data to evaluate consumer behavior and product trends.
                     </p>
                     <span>Excel • Power BI</span>
                 </div>
                 <div class="project-card">
                     <h3>Kickstarter Analysis</h3>
                     <p>
-                        Campaign performance and success rate analysis.
+                        Campaign performance tracking and success rate probability modeling.
                     </p>
                     <span>Power BI • Excel</span>
                 </div>
@@ -107,27 +109,26 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact">
-            <h2>Let's Connect</h2>
-            <p>
-                Interested in data, analytics, or collaboration? Feel free to connect with me.
+        <section id="contact" class="fade-in">
+            <h2>Let's Build Something Great</h2>
+            <p class="contact-desc">
+                Have a project in mind, a data challenge to solve, or want to discuss analytics opportunities? Get in touch.
             </p>
-            <a href="https://www.linkedin.com/" target="_blank" class="btn">
-                LinkedIn
+            <a href="https://www.linkedin.com/" target="_blank" class="btn primary-btn">
+                Connect on LinkedIn
             </a>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Omar Mosaad. All Rights Reserved.</p>
+        <p>© 2026 Omar Mosaad. Crafted with precision & data.</p>
     </footer>
 
-    <!-- Sleek Typing Script -->
+    <!-- Interactive Typing Script -->
     <script>
-        const words = ["actionable insights.", "business growth.", "interactive dashboards.", "smart decisions."];
+        const words = ["Strategic Insights.", "Business Value.", "Interactive Dashboards.", "Growth Metrics."];
         let i = 0;
-        let timer;
 
         function typingEffect() {
             let word = words[i].split("");
@@ -138,7 +139,7 @@
                     setTimeout(deletingEffect, 2000);
                     return;
                 }
-                timer = setTimeout(loopTyping, 100);
+                setTimeout(loopTyping, 90);
             };
             loopTyping();
         }
@@ -150,15 +151,11 @@
                     word.pop();
                     document.querySelector('.typed-text').innerHTML = word.join("");
                 } else {
-                    if (words.length > (i + 1)) {
-                        i++;
-                    } else {
-                        i = 0;
-                    }
-                    setTimeout(typingEffect, 500);
+                    i = (i + 1) % words.length;
+                    setTimeout(typingEffect, 400);
                     return;
                 }
-                timer = setTimeout(loopDeleting, 50);
+                setTimeout(loopDeleting, 45);
             };
             loopDeleting();
         }
