@@ -75,31 +75,135 @@
             </div>
         </section>
 
+        <!-- قسم المشاريع التفاعلي -->
         <section id="projects" class="fade-in">
             <h2>Featured Projects</h2>
             <div class="projects-container">
-                <div class="project-card">
+                
+                <!-- Project 1: Superstore Analysis -->
+                <div class="project-card" onclick="openModal('superstoreModal')">
                     <h3>Superstore Analysis</h3>
                     <p>Comprehensive sales, profit, customer segmentation, and regional performance dashboard.</p>
                     <span>Power BI • DAX</span>
+                    <div class="card-hint">Click to view dashboards & details</div>
                 </div>
-                <div class="project-card">
+
+                <!-- Project 2: HR Analytics -->
+                <div class="project-card" onclick="openModal('hrModal')">
                     <h3>HR Analytics</h3>
                     <p>Workforce insights tracking employee attrition, overtime patterns, and income distribution.</p>
                     <span>Power BI • DAX</span>
+                    <div class="card-hint">Click to view dashboards & details</div>
                 </div>
-                <div class="project-card">
+
+                <!-- Project 3: Coffee Sales Analysis -->
+                <div class="project-card" onclick="openModal('coffeeModal')">
                     <h3>Coffee Sales Analysis</h3>
                     <p>Deep dive into transactional data to evaluate consumer behavior and product trends.</p>
                     <span>Excel • Power BI</span>
+                    <div class="card-hint">Click to view dashboards & details</div>
                 </div>
-                <div class="project-card">
+
+                <!-- Project 4: Kickstarter Analysis -->
+                <div class="project-card" onclick="openModal('kickstarterModal')">
                     <h3>Kickstarter Analysis</h3>
                     <p>Campaign performance tracking and success rate probability modeling.</p>
                     <span>Power BI • Excel</span>
+                    <div class="card-hint">Click to view dashboards & details</div>
                 </div>
+
             </div>
         </section>
+
+        <!-- Modals التفاعلية لكل مشروع -->
+        
+        <!-- Modal: Superstore -->
+        <div id="superstoreModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('superstoreModal')">&times;</span>
+                <h2>Superstore Analysis</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="dashboard1-img1.png" alt="Sales Overview">
+                        <div class="slide-caption">Overview & Regional Performance Dashboard</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="dashboard1-img2.png" alt="Customer Segmentation">
+                        <div class="slide-caption">Customer Segmentation & Profitability Analysis</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'superstoreModal')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'superstoreModal')">&#10095;</a>
+                </div>
+                <div class="modal-about">
+                    <h3>Project Overview & Insights</h3>
+                    <p>This comprehensive Power BI solution targets retail optimization. By analyzing multi-year transactional data using advanced DAX measures, the dashboard highlights top-performing product categories, regional profit leakages, and precise customer segmentation behaviors to drive targeted marketing campaigns.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: HR Analytics -->
+        <div id="hrModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('hrModal')">&times;</span>
+                <h2>HR Analytics</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="hr-img1.png" alt="Attrition Dashboard">
+                        <div class="slide-caption">Workforce Attrition & Overview Dashboard</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="hr-img2.png" alt="Demographics & Income">
+                        <div class="slide-caption">Demographics, Overtime & Income Distribution</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'hrModal')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'hrModal')">&#10095;</a>
+                </div>
+                <div class="modal-about">
+                    <h3>Project Overview & Insights</h3>
+                    <p>Designed using the HR dataset, this multi-page dashboard tracks key workforce dynamics. It evaluates employee attrition drivers, correlation between overtime patterns and resignation rates, and departmental salary distribution, empowering management to improve retention strategies.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Coffee Sales -->
+        <div id="coffeeModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('coffeeModal')">&times;</span>
+                <h2>Coffee Sales Analysis</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="coffee-img1.png" alt="Sales Trends">
+                        <div class="slide-caption">Transactional Trends & Product Performance</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'coffeeModal')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'coffeeModal')">&#10095;</a>
+                </div>
+                <div class="modal-about">
+                    <h3>Project Overview & Insights</h3>
+                    <p>An in-depth evaluation of retail coffee transactions combining Excel data transformation with interactive Power BI reporting. Focuses on peak hours, best-selling product variations, and consumer purchasing habits across different store branches.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Kickstarter -->
+        <div id="kickstarterModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('kickstarterModal')">&times;</span>
+                <h2>Kickstarter Analysis</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="kickstarter-img1.png" alt="Campaign Success">
+                        <div class="slide-caption">Campaign Success Rates & Goal Analysis</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'kickstarterModal')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'kickstarterModal')">&#10095;</a>
+                </div>
+                <div class="modal-about">
+                    <h3>Project Overview & Insights</h3>
+                    <p>Tracking global crowdfunding campaigns to model success rate probabilities based on funding goals, launch timing, and category trends. Utilizes Power BI and Excel statistical functions to advise creators on optimal campaign strategies.</p>
+                </div>
+            </div>
+        </div>
 
         <section id="contact" class="fade-in">
             <h2>Let's Build Something Great</h2>
@@ -117,6 +221,7 @@
     </footer>
 
     <script>
+        // Typing effect
         const words = ["Strategic Insights.", "Business Value.", "Interactive Dashboards.", "Growth Metrics."];
         let i = 0;
         function typingEffect() {
@@ -148,6 +253,44 @@
             loopDeleting();
         }
         typingEffect();
+
+        // Modal and Slideshow JavaScript Control
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            showSlides(1, modalId);
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('project-modal')) {
+                event.target.style.display = "none";
+            }
+        }
+
+        // Slideshow logic per modal
+        let slideIndices = {};
+
+        function plusSlides(n, modalId) {
+            showSlides(slideIndices[modalId] += n, modalId);
+        }
+
+        function showSlides(n, modalId) {
+            let modal = document.getElementById(modalId);
+            let slides = modal.getElementsByClassName("slide");
+            if (!slideIndices[modalId]) { slideIndices[modalId] = 1; }
+            
+            if (n > slides.length) { slideIndices[modalId] = 1; }
+            if (n < 1) { slideIndices[modalId] = slides.length; }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndices[modalId] - 1].style.display = "block";  
+        }
     </script>
 </body>
 </html>
