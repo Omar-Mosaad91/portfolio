@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Omar Mosaad | Data Analyst</title>
-
-    <meta name="description"
-          content="Omar Mosaad - Data Analyst and Data Science enthusiast.">
-
+    <meta name="description" content="Omar Mosaad - Data Analyst and Data Science enthusiast.">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <!-- Navigation -->
     <header>
         <nav>
             <div class="logo">OM</div>
-
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -29,152 +23,130 @@
         </nav>
     </header>
 
-
     <!-- Hero Section -->
     <main>
-
         <section id="home" class="hero">
-
             <div class="hero-content">
-
                 <p class="small-title">
                     DATA ANALYST • DATA SCIENCE
                 </p>
-
                 <h1>
                     Hi, I'm <span>Omar Mosaad</span>
                 </h1>
-
                 <h2>
-                    Turning Data Into Meaningful Insights
+                    Turning Data Into <span class="typed-text">Meaningful Insights</span>
                 </h2>
-
                 <p>
-                    I am building my career in Data Analytics while
-                    developing my knowledge in Data Science.
+                    I am building my career in Data Analytics while developing my knowledge in Data Science.
                 </p>
-
                 <div class="buttons">
                     <a href="#projects" class="btn">
                         View My Projects
                     </a>
-
                     <a href="#contact" class="btn secondary">
                         Contact Me
                     </a>
                 </div>
-
             </div>
-
         </section>
-
 
         <!-- About -->
         <section id="about">
-
             <h2>About Me</h2>
-
             <p>
-                I am a Data Science student passionate about Data Analytics,
-                Business Understanding, and turning raw data into useful
-                insights that can support better decisions.
+                I am a Data Science student passionate about Data Analytics, Business Understanding, and turning raw data into useful insights that can support better decisions.
             </p>
-
         </section>
-
 
         <!-- Skills -->
         <section id="skills">
-
             <h2>Skills</h2>
-
             <div class="skills-container">
-
                 <div class="skill">Excel</div>
                 <div class="skill">Power BI</div>
                 <div class="skill">SQL</div>
                 <div class="skill">Python</div>
                 <div class="skill">Pandas</div>
                 <div class="skill">DAX</div>
-
             </div>
-
         </section>
-
 
         <!-- Projects -->
         <section id="projects">
-
             <h2>Featured Projects</h2>
-
             <div class="projects-container">
-
                 <div class="project-card">
                     <h3>Superstore Analysis</h3>
                     <p>
-                        Sales, Profit, Customers, Products,
-                        Regions and Shipping analysis.
+                        Sales, Profit, Customers, Products, Regions and Shipping analysis.
                     </p>
                     <span>Power BI • DAX</span>
                 </div>
-
                 <div class="project-card">
                     <h3>HR Analytics</h3>
                     <p>
-                        Employee attrition, overtime,
-                        income and workforce analysis.
+                        Employee attrition, overtime, income and workforce analysis.
                     </p>
                     <span>Power BI • DAX</span>
                 </div>
-
                 <div class="project-card">
                     <h3>Coffee Sales Analysis</h3>
                     <p>
-                        Sales performance, customer behavior
-                        and product analysis.
+                        Sales performance, customer behavior and product analysis.
                     </p>
                     <span>Excel • Power BI</span>
                 </div>
-
                 <div class="project-card">
                     <h3>Kickstarter Analysis</h3>
                     <p>
-                        Campaign performance and
-                        success rate analysis.
+                        Campaign performance and success rate analysis.
                     </p>
                     <span>Power BI • Excel</span>
                 </div>
-
             </div>
-
         </section>
-
 
         <!-- Contact -->
         <section id="contact">
-
             <h2>Let's Connect</h2>
-
             <p>
-                Interested in data, analytics, or collaboration?
-                Feel free to connect with me.
+                Interested in data, analytics, or collaboration? Feel free to connect with me.
             </p>
-
-            <a href="https://www.linkedin.com/"
-               target="_blank"
-               class="btn">
+            <a href="https://www.linkedin.com/" target="_blank" class="btn">
                 LinkedIn
             </a>
-
         </section>
-
     </main>
-
 
     <!-- Footer -->
     <footer>
         <p>© 2026 Omar Mosaad. All Rights Reserved.</p>
     </footer>
 
+    <!-- Interactive Typing Script -->
+    <script>
+        const texts = ["Meaningful Insights", "Business Value", "Smart Decisions", "Data Stories"];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.querySelector(".typed-text").textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000); // Wait 2 seconds before switching text
+            } else {
+                setTimeout(type, 100);
+            }
+        }());
+    </script>
 </body>
 </html>
