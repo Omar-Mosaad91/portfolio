@@ -3,133 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Mosaad | Data Analyst</title>
-    <meta name="description" content="Omar Mosaad - Data Analyst and Business Intelligence Professional.">
+    <title>Omar Mosaad Balbolla | Data Analyst</title>
+    <meta name="description" content="Omar Mosaad Balbolla - Data Analyst and Aspiring Data Scientist.">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* التعديل: تمركز الـ Modal في منتصف الشاشة بدقة */
-        .project-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(5px);
-        }
-        .modal-content {
-            background-color: #0f172a;
-            margin: 1.5vh auto; /* ضبط المسافة العلوية ليكون في منتصف الشاشة تماماً */
-            padding: 15px 20px;
-            border: 1px solid #1e293b;
-            width: 85%;
-            max-width: 850px;
-            border-radius: 14px;
-            position: relative;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-        }
-        .modal-content h2 {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-            padding-right: 30px; /* مسافة لعدم تداخل العنوان مع زر الإغلاق */
-        }
-
-        /* التعديل: تحسين مكان وشكل زر الإغلاق (X) ليكون واضح وبارز تماماً */
-        .close-btn {
-            position: absolute;
-            top: 12px;
-            right: 18px;
-            color: #94a3b8;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-            z-index: 20;
-            line-height: 1;
-        }
-        .close-btn:hover {
-            color: #ffffff;
-        }
-
-        .slideshow-container {
-            position: relative;
-            background: #0b0f19;
-            border-radius: 10px;
-            overflow: hidden;
-            padding: 6px;
-            text-align: center;
-        }
-        .slide {
-            display: none;
-            animation-name: fadeSlide;
-            animation-duration: 0.5s;
-        }
-        @keyframes fadeSlide {
-            from { opacity: 0.4; transform: scale(0.98); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        .slide img {
-            width: 100%;
-            max-height: 310px;
-            object-fit: contain;
-            border-radius: 6px;
-            background-color: #111827;
-        }
-        
-        /* التعديل: تفتيح لون الـ Caption ووضوحه تحت الصورة */
-        .slide-caption {
-            color: #e2e8f0; 
-            font-size: 0.88rem;
-            font-weight: 500;
-            margin-top: 8px;
-            margin-bottom: 4px;
-        }
-
-        .slide-about {
-            background: rgba(17, 24, 39, 0.8);
-            border-left: 3px solid #3b82f6;
-            padding: 10px 12px;
-            margin-top: 10px;
-            border-radius: 6px;
-            text-align: left;
-        }
-        .slide-about h4 {
-            color: #60a5fa;
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-        }
-        .slide-about p {
-            color: #d1d5db;
-            font-size: 0.83rem;
-            line-height: 1.4;
-            margin: 0;
-        }
-
-        /* زر الانتقال على اليمين */
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 42%;
-            right: 0;
-            width: auto;
-            padding: 12px;
-            margin-top: -18px;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            transition: 0.3s ease;
-            border-radius: 3px 0 0 3px;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 10;
-        }
-        .next:hover {
-            background-color: rgba(59, 130, 246, 0.8);
-        }
-    </style>
 </head>
 <body>
 
@@ -158,8 +34,9 @@
                     <span></span> Available for Opportunities
                 </div>
                 <h1>
-                    Hi, I'm <span class="highlight">Omar Mosaad</span>
+                    <span class="highlight">Omar Mosaad Balbolla</span>
                 </h1>
+                <p class="hero-subtitle">Data Analyst | Aspiring Data Scientist</p>
                 <h2>
                     Transforming Raw Data Into <span class="typed-text"></span><span class="cursor">|</span>
                 </h2>
@@ -185,7 +62,7 @@
         </section>
 
         <section id="skills" class="fade-in">
-            <h2>Core Competencies</h2>
+            <h2>Skills</h2>
             <div class="skills-container">
                 <div class="skill">Python</div>
                 <div class="skill">SQL</div>
@@ -242,19 +119,20 @@
                     <div class="slide fade">
                         <img src="dashboard1-img1.png" alt="Sales Overview">
                         <div class="slide-caption">Overview & Regional Performance Dashboard</div>
-                        <div class="slide-about">
-                            <h4>Regional Performance & Sales Insights</h4>
+                        <div class="modal-about">
+                            <h3>Regional Performance & Sales Insights</h3>
                             <p>Tracks overarching revenue streams, profit margins across different states, and top-performing product categories to isolate key financial growth drivers.</p>
                         </div>
                     </div>
                     <div class="slide fade">
                         <img src="dashboard1-img2.png" alt="Customer Segmentation">
                         <div class="slide-caption">Customer Segmentation & Profitability Analysis</div>
-                        <div class="slide-about">
-                            <h4>Customer Behavior & Profitability</h4>
+                        <div class="modal-about">
+                            <h3>Customer Behavior & Profitability</h3>
                             <p>Evaluates corporate versus consumer segment buying patterns, identifying high-value customer tiers to optimize future discount and marketing strategies.</p>
                         </div>
                     </div>
+                    <a class="prev" onclick="plusSlides(-1, 'superstoreModal')">&#10094;</a>
                     <a class="next" onclick="plusSlides(1, 'superstoreModal')">&#10095;</a>
                 </div>
             </div>
@@ -268,35 +146,36 @@
                     <div class="slide fade">
                         <img src="HR-project/HR_Project_1.png" alt="Attrition Dashboard">
                         <div class="slide-caption">Workforce Attrition & Overview Dashboard</div>
-                        <div class="slide-about">
-                            <h4>Workforce Overview & Key Metrics</h4>
+                        <div class="modal-about">
+                            <h3>Workforce Overview & Key Metrics</h3>
                             <p>High-level aggregation showing average working years, company tenure, training frequencies, and overall structural demographics across departments.</p>
                         </div>
                     </div>
                     <div class="slide fade">
                         <img src="HR-project/HR_Project_2.png" alt="Demographics & Income">
                         <div class="slide-caption">Demographics, Overtime & Income Distribution</div>
-                        <div class="slide-about">
-                            <h4>Overtime & Income Correlation</h4>
+                        <div class="modal-about">
+                            <h3>Overtime & Income Correlation</h3>
                             <p>Investigates how overtime patterns and income levels directly correlate with employee resignation rates and turnover triggers.</p>
                         </div>
                     </div>
                     <div class="slide fade">
                         <img src="HR-project/HR_Project_3.png" alt="Salary & Performance">
                         <div class="slide-caption">Salary & Performance Analysis</div>
-                        <div class="slide-about">
-                            <h4>Salary & Performance Mapping</h4>
+                        <div class="modal-about">
+                            <h3>Salary & Performance Mapping</h3>
                             <p>Analyzes performance review scores alongside departmental compensation structures to ensure competitive remuneration alignment.</p>
                         </div>
                     </div>
                     <div class="slide fade">
                         <img src="HR-project/HR_Project_4.png" alt="Employee Care">
                         <div class="slide-caption">Employee Care & Summary</div>
-                        <div class="slide-about">
-                            <h4>Employee Care & Strategic Summary</h4>
+                        <div class="modal-about">
+                            <h3>Employee Care & Strategic Summary</h3>
                             <p>Summarizes internal satisfaction markers and care metrics, giving HR management actionable guidelines to enhance workforce retention.</p>
                         </div>
                     </div>
+                    <a class="prev" onclick="plusSlides(-1, 'hrModal')">&#10094;</a>
                     <a class="next" onclick="plusSlides(1, 'hrModal')">&#10095;</a>
                 </div>
             </div>
@@ -310,11 +189,12 @@
                     <div class="slide fade">
                         <img src="coffee-img1.png" alt="Sales Trends">
                         <div class="slide-caption">Transactional Trends & Product Performance</div>
-                        <div class="slide-about">
-                            <h4>Retail Transactional Behavior</h4>
+                        <div class="modal-about">
+                            <h3>Retail Transactional Behavior</h3>
                             <p>Examines peak buying hours, top-selling coffee blends, and branch-specific revenue generation to optimize daily inventory management.</p>
                         </div>
                     </div>
+                    <a class="prev" onclick="plusSlides(-1, 'coffeeModal')">&#10094;</a>
                     <a class="next" onclick="plusSlides(1, 'coffeeModal')">&#10095;</a>
                 </div>
             </div>
@@ -328,11 +208,12 @@
                     <div class="slide fade">
                         <img src="kickstarter-img1.png" alt="Campaign Success">
                         <div class="slide-caption">Campaign Success Rates & Goal Analysis</div>
-                        <div class="slide-about">
-                            <h4>Crowdfunding Success Modeling</h4>
+                        <div class="modal-about">
+                            <h3>Crowdfunding Success Modeling</h3>
                             <p>Assesses how funding targets, category selection, and launch timing influence global campaign success probabilities.</p>
                         </div>
                     </div>
+                    <a class="prev" onclick="plusSlides(-1, 'kickstarterModal')">&#10094;</a>
                     <a class="next" onclick="plusSlides(1, 'kickstarterModal')">&#10095;</a>
                 </div>
             </div>
@@ -350,7 +231,7 @@
     </main>
 
     <footer>
-        <p>© 2026 Omar Mosaad. Crafted with precision & data.</p>
+        <p>© 2026 Omar Mosaad Balbolla. Crafted with precision & data.</p>
     </footer>
 
     <script>
